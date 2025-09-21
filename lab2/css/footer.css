@@ -1,0 +1,53 @@
+/* ====================================================================================================================================================================== */
+/* FOOTER */
+
+.footer {
+    padding-block-start: 2.4375rem;
+    padding-block-end: 2.5rem;
+    background-color: #F8F8F8;
+}
+
+.footer__container>div:not(:last-child) {
+    padding-block-end: 2.125rem;
+    border-bottom: 0.0625rem solid #C4C4C4;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__logo {
+    flex-shrink: 0;
+}
+
+.footer__copyright {
+    font-size: 1.0625rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: "Mulish", sans-serif;
+    color: #848484;
+}
+
+.footer__bottom {
+    padding-block-start: 1.875rem;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2.1875rem;
+}
+
+.footer__social svg path {
+    transition: fill 0.2s ease-in-out;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+    .footer__social:hover svg path {
+        fill: #FB8F1D;
+    }
+}

@@ -1,0 +1,104 @@
+/* ====================================================================================================================================================================== */
+/* DESTINATIONS */
+
+.destinations {
+    padding-block-start: 10.1875rem;
+    padding-block-end: 8.4375rem;
+}
+
+.destinations__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+    margin-block-end: 3.75rem;
+    flex-wrap: wrap;
+}
+
+.destinations__title {
+    font-family: "Playfair Display";
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.destinations__link {
+    color: #FB8F1D;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.4;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.2s ease-in-out;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+    .destinations__link:hover {
+        color: #c16f17;
+    }
+}
+
+.destinations__link::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/icons/orange-arrow.svg");
+    background-repeat: no-repeat;
+    width: 0.625rem;
+    height: 0.625rem;
+    background-size: contain;
+}
+
+.destinations__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16.25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery__item {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.gallery__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    aspect-ratio: 261 / 332;
+}
+
+.gallery__caption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-block-start: 0.6875rem;
+    padding-inline-end: 1.375rem;
+    background-color: white;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+}
+
+.gallery__title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #042521;
+}
+
+.gallery__subtitle {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #80918E;
+}
+
+@media (max-width: 1150px) {
+    .destinations {
+       padding-block: 3rem;
+    }
+}

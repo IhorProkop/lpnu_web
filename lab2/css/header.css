@@ -1,0 +1,247 @@
+/* ====================================================================================================================================================================== */
+/* HEADER */
+
+.header {
+    padding-block-start: 4rem;
+    padding-block-end: 6.25rem;
+}
+
+.header__logo {
+    flex-shrink: 0;
+    z-index: 5;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 2.125rem;
+    row-gap: 1rem;
+}
+
+@media (max-width: 780px) {
+    .header__container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 701px) {
+    .header__content {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+}
+
+.menu__list {
+    display: flex;
+    column-gap: 2.1875rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    column-gap: 2.125rem;
+}
+
+.menu__link {
+    color: #B8BECD;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.menu__link {
+    color: #B8BECD;
+    font-weight: 500;
+    display: inline-block;
+    animation: linkHover 1s ease normal;
+}
+
+@keyframes linkHover {
+    0% {
+        color: #B8BECD;
+    }
+
+    50% {
+        color: black;
+    }
+
+    100% {
+        color: #B8BECD;
+    }
+}
+
+.menu__link:hover {
+    color: #202336;
+}
+
+.header__auth-buttons {
+    display: flex;
+    gap: 1.125rem;
+    position: relative;
+    z-index: 5;
+}
+
+.btn {
+    border-radius: 8px;
+    min-width: 8.25rem;
+    min-height: 2.75rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-transparent {
+    border: 0.0625rem solid #FB8F1D;
+    color: #FB8F1D;
+    background-color: white;
+    transition: background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.btn-filled {
+    background-color: #FB8F1D;
+    color: white;
+    border: 0.0625rem solid #FB8F1D;
+    transition: background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+    .btn-filled:hover {
+        background-color: white;
+        color: #FB8F1D;
+    }
+
+    .btn-transparent:hover {
+        background-color: #FB8F1D;
+        color: white;
+    }
+}
+
+.header__burger {
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 6;
+    cursor: pointer;
+    display: none;
+}
+
+.header__burger::before,
+.header__burger::after,
+.header__burger span {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s;
+    background-color: #000;
+}
+
+.header__burger::before {
+    top: 0;
+}
+
+.header__burger::after {
+    bottom: 0;
+}
+
+.header__burger span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-open .header__burger span {
+    width: 0;
+}
+
+.menu-open .header__burger::before {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-2px);
+}
+
+.menu-open .header__burger::after {
+    bottom: 50%;
+    transform: rotate(45deg) translateY(2px);
+}
+
+@media (max-width: 776px) {
+    .header__menu {
+        position: fixed;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        right: -100%;
+        top: 0;
+        z-index: 3;
+        background-color: #1a1a1a;
+        padding: 165px 15px 30px 15px;
+        transition: all 0.3s;
+    }
+
+    .header__menu::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        z-index: 3;
+        height: 150px;
+        transition: all 0.3s;
+        background-color: white;
+    }
+
+    .menu-open .header__menu,
+    .menu-open .header__menu::before {
+        right: 0;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__container {
+        justify-content: space-between;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1.5rem;
+        font-size: 1.5625rem;
+    }
+
+    .menu__link {
+        color: white;
+    }
+
+    @media (any-hover: hover) and (pointer: fine) {
+        .menu__link:hover {
+            color: #FB8F1D;
+        }
+    }
+}
+
+@media (max-width: 504px) {
+    .header__menu {
+        gap: 1rem;
+    }
+
+    .header__auth-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

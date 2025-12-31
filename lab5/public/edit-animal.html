@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab3</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__content">
+            <a href="index.html" class="header__logo">My Zoo</a>
+            <nav class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">My Animals</a></li>
+                <li class="menu__item"><a href="create-animal.html" class="menu__link">Create Animal</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="page" role="main">
+        <div class="page__container">
+          <form class="page__form animals-form" action="/edit-animal" method="post" novalidate>
+            <h1 class="animals-form__title">Edit Animal</h1>
+
+            <div class="animals-form__name">
+              <label class="animals-form__label" for="title">Title</label>
+              <input
+                class="animals-form__input"
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter title..."
+                required
+                minlength="2"
+                maxlength="30"
+                pattern="^[A-Za-zА-Яа-яЁёІіЇїЄє'’ -]+$"
+                title="Only letters, spaces, apostrophes and dashes"
+              />
+            </div>
+
+            <div class="animals-form__description">
+              <label class="animals-form__label" for="description">Description</label>
+              <textarea
+                class="animals-form__textarea"
+                id="description"
+                name="description"
+                placeholder="Enter description..."
+                required
+                minlength="10"
+                maxlength="300"
+              ></textarea>
+            </div>
+
+            <div class="animals-form__expense">
+              <label class="animals-form__label" for="expense">Daily expense ($)</label>
+              <input
+                class="animals-form__input"
+                type="number"
+                id="expense"
+                name="expense"
+                placeholder="Enter expense..."
+                required
+                inputmode="numeric"
+                min="1"
+                max="100000"
+                step="1"
+              />
+            </div>
+
+            <div class="animals-form__type">
+              <label class="animals-form__label" for="type">Animal type</label>
+              <select class="animals-form__select" id="type" name="type" required>
+                <option value="" disabled>Select type...</option>
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+                <option value="parrot">Parrot</option>
+                <option value="hamster">Hamster</option>
+                <option value="turtle">Turtle</option>
+              </select>
+            </div>
+
+            <button type="submit" class="animals-form__button">Submit</button>
+          </form>
+        </div>
+      </main>
+
+      <footer class="footer">footer</footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

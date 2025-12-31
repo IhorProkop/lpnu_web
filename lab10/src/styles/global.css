@@ -1,0 +1,67 @@
+@import url("reset.css");
+
+/* Nav styles */
+@import url("../components/Nav/Nav.css");
+
+/* Header styles */
+@import url("../components/Header/Header.css");
+
+/* Hero styles */
+@import url("../components/Hero/Hero.css");
+
+/* Cards styles */
+@import url("../components/HomeCards/HomeCards.css");
+
+/* PrimaryButton styles */
+@import url("../components/Button/PrimaryButton.css");
+
+/* Footer styles */
+@import url("../components/Footer/Footer.css");
+
+/* CatalogCards style */
+@import url("../components/CatalogCards/CatalogCards.css");
+
+/* SearchInput style */
+@import url("../components/SearchInput/SearchInput.css");
+
+/* FilterBar style */
+@import url("../components/FilterBar/FilterBar.css");
+
+/* Item style */
+@import url("../styles/Item.css");
+
+/* Loader styles */
+@import url("../components/Loader/Loader.css");
+
+/* global.css */
+@import url("../styles/Cart.css");
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+
+[class*="__container"] {
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 15px;
+}

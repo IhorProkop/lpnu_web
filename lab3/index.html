@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab3</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__content">
+            <h3 class="header__logo">My Zoo</h3>
+
+            <nav class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="/" class="menu__link">My Animals</a>
+                </li>
+
+                <li class="menu__item">
+                  <a href="/create-animal.html" class="menu__link"
+                    >Create Animal</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <form
+            action="#"
+            class="header__search-form search-form"
+            role="search"
+          >
+            <input
+              type="search"
+              class="search-form__input"
+              placeholder="I`m looking for..."
+              aria-label="Search for animals"
+            />
+
+            <div class="search-form__buttons">
+              <button
+                type="submit"
+                class="search-form__button search-form__button--search"
+              >
+                Search
+              </button>
+              <button
+                type="reset"
+                class="search-form__button search-form__button--reset"
+              >
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+      </header>
+
+      <main class="page" role="main">
+        <div class="page__container">
+          <aside class="page__sidebar sidebar">
+            <section class="sidebar__controls controls">
+              <div class="controls__top">
+                <h2 class="controls__title">Manage animals</h2>
+
+                <div class="controls__option">
+                  <label for="sortByExpense" class="controls__label">
+                    <input
+                      type="checkbox"
+                      id="sortByExpense"
+                      class="controls__checkbox"
+                      checked
+                    />
+                    <span class="controls__switch"></span>
+                    Sort by the most <br />
+                    expensive animals
+                  </label>
+                </div>
+              </div>
+
+              <div class="controls__bottom">
+                <p class="controls__subtitle">Count total daily expenses:</p>
+
+                <button class="controls__button">Count</button>
+
+                <p class="controls__total">
+                  Total expenses:
+                  <span class="controls__total-value">$0</span>
+                </p>
+              </div>
+            </section>
+          </aside>
+
+          <section class="page__content animals">
+            <ul class="animals__list">
+              <li class="animals__item animal-card">
+                <img src="img/cat.jpg" alt="Cat" class="animal-card__img" />
+
+                <div class="animal-card__body">
+                  <div class="animal-card__content">
+                    <h2 class="animal-card__title">Cat</h2>
+
+                    <p class="animal-card__description">
+                      Domestic cats are small, carnivorous mammals that are
+                      valued by humans for companionship and their ability to
+                      hunt rodents.
+                    </p>
+
+                    <time
+                      class="animal-card__last-update"
+                      datetime="2024-04-27T12:00:00Z"
+                    >
+                      Last updated 5 mins ago
+                    </time>
+
+                    <p class="animal-card__expense" data-expense="80">
+                      Daily expense: $80
+                    </p>
+                  </div>
+
+                  <div class="animal-card__buttons">
+                    <button
+                      class="animal-card__button animal-card__button--edit"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="animal-card__button animal-card__button--remove"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="animals__item animal-card">
+                <img src="img/dog.jpg" alt="Dog" class="animal-card__img" />
+
+                <div class="animal-card__body">
+                  <div class="animal-card__content">
+                    <h2 class="animal-card__title">Dog</h2>
+
+                    <p class="animal-card__description">
+                      Dogs are loyal and friendly animals, often called humans’
+                      best friends. They need daily walks and social
+                      interaction.
+                    </p>
+
+                    <time
+                      class="animal-card__last-update"
+                      datetime="2024-04-27T12:00:00Z"
+                    >
+                      Last updated 10 mins ago
+                    </time>
+
+                    <p class="animal-card__expense" data-expense="150">
+                      Daily expense: $150
+                    </p>
+                  </div>
+
+                  <div class="animal-card__buttons">
+                    <button
+                      class="animal-card__button animal-card__button--edit"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="animal-card__button animal-card__button--remove"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="animals__item animal-card">
+                <img
+                  src="img/hamster.jpg"
+                  alt="Hamster"
+                  class="animal-card__img"
+                />
+
+                <div class="animal-card__body">
+                  <div class="animal-card__content">
+                    <h2 class="animal-card__title">Hamster</h2>
+
+                    <p class="animal-card__description">
+                      Hamsters are small rodents that are popular pets, known
+                      for their habit of running on exercise wheels and storing
+                      food in their cheeks.
+                    </p>
+
+                    <time
+                      class="animal-card__last-update"
+                      datetime="2024-04-27T12:00:00Z"
+                    >
+                      Last updated 2 mins ago
+                    </time>
+
+                    <p class="animal-card__expense" data-expense="30">
+                      Daily expense: $30
+                    </p>
+                  </div>
+
+                  <div class="animal-card__buttons">
+                    <button
+                      class="animal-card__button animal-card__button--edit"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="animal-card__button animal-card__button--remove"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="animals__item animal-card">
+                <img
+                  src="img/turtle.jpg"
+                  alt="Turtle"
+                  class="animal-card__img"
+                />
+
+                <div class="animal-card__body">
+                  <div class="animal-card__content">
+                    <h2 class="animal-card__title">Turtle</h2>
+
+                    <p class="animal-card__description">
+                      Turtles are reptiles with a hard shell that protects them.
+                      They can live both on land and in water, and some species
+                      can live for over 100 years.
+                    </p>
+
+                    <time
+                      class="animal-card__last-update"
+                      datetime="2024-04-27T12:00:00Z"
+                    >
+                      Last updated 1 hour ago
+                    </time>
+
+                    <p class="animal-card__expense" data-expense="50">
+                      Daily expense: $50
+                    </p>
+                  </div>
+
+                  <div class="animal-card__buttons">
+                    <button
+                      class="animal-card__button animal-card__button--edit"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="animal-card__button animal-card__button--remove"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">footer</footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

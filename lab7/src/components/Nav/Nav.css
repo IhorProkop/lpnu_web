@@ -1,0 +1,23 @@
+.menu__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu__link {
+  padding-block: 0.7rem;
+  padding-inline: 2rem;
+  border-radius: 15px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+  .menu__link:hover {
+    background-color: gainsboro;
+  }
+}
+
+.menu {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}

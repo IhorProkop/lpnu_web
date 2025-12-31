@@ -1,0 +1,27 @@
+.hero {
+    padding-block: 2.5rem;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero__title {
+    font-size: 2rem;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero__description {
+    font-size: 1.125rem;
+}

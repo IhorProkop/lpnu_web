@@ -1,0 +1,114 @@
+<!DOCTYPE html>  
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab3</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__content">
+            <h3 class="header__logo">My Zoo</h3>
+
+            <nav class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="/" class="menu__link">My Animals</a>
+                </li>
+
+                <li class="menu__item">
+                  <a href="/create-animal.html" class="menu__link"
+                    >Create Animal</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <form
+            action="#"
+            class="header__search-form search-form"
+            role="search"
+          >
+            <input
+              type="search"
+              class="search-form__input"
+              placeholder="I`m looking for..."
+              aria-label="Search for animals"
+            />
+
+            <div class="search-form__buttons">
+              <button
+                type="submit"
+                class="search-form__button search-form__button--search"
+              >
+                Search
+              </button>
+              <button
+                type="reset"
+                class="search-form__button search-form__button--reset"
+              >
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+      </header>
+
+      <main class="page" role="main">
+        <div class="page__container">
+          <aside class="page__sidebar sidebar">
+            <section class="sidebar__controls controls">
+              <div class="controls__top">
+                <h2 class="controls__title">Manage animals</h2>
+
+                <div class="controls__option">
+                  <label for="sortByExpense" class="controls__label">
+                    <input
+                      type="checkbox"
+                      id="sortByExpense"
+                      class="controls__checkbox"
+                      checked
+                    />
+                    <span class="controls__switch"></span>
+                    Sort by the most <br />
+                    expensive animals
+                  </label>
+                </div>
+              </div>
+
+              <div class="controls__bottom">
+                <p class="controls__subtitle">Count total daily expenses:</p>
+
+                <button class="controls__button">Count</button>
+
+                <p class="controls__total">
+                  Total expenses:
+                  <span class="controls__total-value">$0</span>
+                </p>
+              </div>
+            </section>
+          </aside>
+
+          <section class="page__content animals">
+            <!-- Список рендерить JS з REST API (не localStorage) -->
+            <ul class="animals__list"></ul>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">footer</footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

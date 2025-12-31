@@ -1,0 +1,117 @@
+/* ====================================================================================================================================================================== */
+/* HERO */
+
+.hero {
+    padding-block-end: 12.5rem;
+}
+.hero__container {
+    display: flex;
+    column-gap: 6.25rem;
+    row-gap: 1rem;
+}
+.hero__title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.25;
+    font-family: "Playfair Display", serif;
+    color: #202336;
+    margin-block-end: 4.625rem;
+}
+.form__title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #202336;
+    position: relative;
+    margin-block-end: 4.3125rem;
+}
+.form__title::before {
+    position: absolute;
+    content: "";
+    width: 8%;
+    background-color: #202336;
+    height: 0.125rem;
+    bottom: -1.3125rem;
+}
+.form__field-groups {
+    margin-block-end: 2.9375rem
+}
+.hero__content {
+    flex-basis: 29.375rem;
+}
+.form__field-groups {
+    display: grid;
+    gap: 1rem;
+}
+.form__field-group {
+    display: grid;
+    grid-template-columns: repeat(2, 13.75rem);
+    gap: 1rem;
+}
+.hero__media img {
+    aspect-ratio: 687 / 654;
+}
+
+.hero__media {
+    animation: floating 2s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 1150px) {
+    .hero__container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form__field-group {
+        grid-template-columns: 1fr !important;
+    }
+
+    .form__button {
+        width: 100%;
+    }
+
+    .hero {
+        padding-block-end: 4rem;
+    }
+}
+
+
+/* ====================================================================================================================================================================== */
+/* FORM */
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-block: 1.3125rem;
+    padding-inline-start: 1.9375rem;
+    padding-inline-end: 8.125rem;
+    min-height: 3.25rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    color: #4A4C53;
+    border: 0.0625rem solid #AFB0B9;
+    border-radius: 6px;
+    background-image: url("../img/icons/chevron.svg");
+    background-repeat: no-repeat;
+    background-position: right 1.875rem center;
+}
+a:focus-visible,
+.btn:focus-visible,
+select:focus-visible {
+    outline: 2px solid #FB8F1D;
+}
+.form__button {
+    min-width: 11.25rem;
+    min-height: 3.25rem;
+}
